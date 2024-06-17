@@ -1,4 +1,5 @@
- USE productsDB;
+ USE ToursDB;
+ 
 CREATE TABLE Users(
 UserID VARCHAR(255) PRIMARY KEY,
 UserName VARCHAR(255) NOT NULL,

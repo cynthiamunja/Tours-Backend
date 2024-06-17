@@ -1,7 +1,7 @@
+USE ToursDB;
 CREATE TABLE Hotels (
-    HotelID VARCHAR PRIMARY KEY ,
+    HotelID VARCHAR(255) PRIMARY KEY,
     HotelName VARCHAR(255) NOT NULL,
-	HotelPrice int not null,
-	HotelDescription VARCHAR(255) NOT NULL
-	
+    HotelPrice INT NOT NULL,
+    HotelDescription VARCHAR(255) NOT NULL
 );
