@@ -1,0 +1,11 @@
+USE ToursDB;
+GO
+
+
+
+CREATE PROCEDURE getHotels
+AS
+BEGIN
+    SELECT * FROM Hotels;
+END;
+GO

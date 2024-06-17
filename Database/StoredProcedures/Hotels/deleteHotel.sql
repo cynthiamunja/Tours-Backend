@@ -1,0 +1,11 @@
+USE ToursDB;
+
+GO
+
+CREATE PROCEDURE deleteHotel
+    @HotelID VARCHAR(255)
+AS
+BEGIN
+    DELETE FROM Hotels WHERE HotelID = @HotelID;
+END;
+GO

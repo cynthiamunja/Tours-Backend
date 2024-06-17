@@ -1,0 +1,10 @@
+USE ToursDB;
+GO
+
+CREATE OR ALTER PROCEDURE getOneTour
+    @TourID VARCHAR(255)
+AS
+BEGIN
+    SELECT * FROM Tours WHERE TourID = @TourID;
+END;
+GO

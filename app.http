@@ -1,0 +1,178 @@
+GET http://localhost:3000/Tours
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzNTNhN2RjYi04OGRlLTQ5NjEtYmU5Ny04ZTU2ZTliNmUzNDEiLCJVc2VyTmFtZSI6ImNpbmR5IiwiRW1haWwiOiJtdW5qYWN5bnRoaWFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjE5MTE3LCJleHAiOjE3MTg2MjYzMTd9.tAb5rT1tzC9c2gWAYeSoK-Vrt1hkrho6lopDy7q15ak
+
+#######
+### Add a new tour with authentication
+POST http://localhost:3000/Tours
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI1NzEyLCJleHAiOjE3MTg2MzI5MTJ9.B8cGm_sZzfwrYRMgdmSMjZSvsPVLOONVptBhGmRWH34
+
+{
+    "TourName": "1155 resort5",
+    "TourPrice": 30000,
+    "TourDescription": "samburu, kenya"
+}
+
+#########
+GET http://localhost:3000/Tours/T001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI1NzEyLCJleHAiOjE3MTg2MzI5MTJ9.B8cGm_sZzfwrYRMgdmSMjZSvsPVLOONVptBhGmRWH34
+
+#########
+DELETE http://localhost:3000/Tours/T002
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjE5NTI2LCJleHAiOjE3MTg2MjY3MjZ9.IVh3Nch4eOgN6IpJ5Vv3r_TICQajOhuYi0HUgzKaQCc
+
+#########
+PUT http://localhost:3000/Tours/5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjE5NTI2LCJleHAiOjE3MTg2MjY3MjZ9.IVh3Nch4eOgN6IpJ5Vv3r_TICQajOhuYi0HUgzKaQCc
+
+
+{
+    "TourName": "diani5 beach",
+    "TourPrice":50000,
+    "TourDescription": "diani, kenya"
+}
+
+#######
+
+POST http://localhost:3000/Hotels
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI1NzEyLCJleHAiOjE3MTg2MzI5MTJ9.B8cGm_sZzfwrYRMgdmSMjZSvsPVLOONVptBhGmRWH34
+
+
+
+{
+    "HotelName": "zanzibar1 beach hotel",
+    "HotelPrice":5000,
+    "HotelDescription": "zanzibar, tanzania"
+}
+
+######
+GET http://localhost:3000/Hotels
+
+
+#########
+GET http://localhost:3000/Hotels/36e49b91-2d14-4db1-86ff-3da88a80d7c2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI1NzEyLCJleHAiOjE3MTg2MzI5MTJ9.B8cGm_sZzfwrYRMgdmSMjZSvsPVLOONVptBhGmRWH34
+
+
+
+#########
+
+PUT http://localhost:3000/Hotels/0869ed10-daec-43e6-8389-e246c55d1a2e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI1NzEyLCJleHAiOjE3MTg2MzI5MTJ9.B8cGm_sZzfwrYRMgdmSMjZSvsPVLOONVptBhGmRWH34
+
+
+{
+    "HotelName": "zanzibar001 beach hotel",
+    "HotelPrice":7000,
+    "HotelDescription": "zanzibar, Tanzania"
+}
+
+#######
+DELETE http://localhost:3000/Hotels/0869ed10-daec-43e6-8389-e246c55d1a2e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI1NzEyLCJleHAiOjE3MTg2MzI5MTJ9.B8cGm_sZzfwrYRMgdmSMjZSvsPVLOONVptBhGmRWH34
+
+
+
+######
+
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "UserName": "cindy",
+    "Email":"munjacynthia@gmail.com",
+    "UserPassword":"P@ssw0rd1"
+}
+
+# {
+#     "UserName": "admin",
+#     "Email":"cynthiamunja@gmail.com",
+#     "UserPassword":"P@ssw0rd1"
+# }
+#########
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  
+"Email":"munjacynthia@gmail.com",
+    "UserPassword":"P@ssw0rd1"
+}
+#########
+
+POST http://localhost:3000/auth/Adminlogin
+Content-Type: application/json
+
+{
+"Email":"cynthiamunja@gmail.com",
+   "UserPassword":"P@ssw0rd1"
+}
+#########
+
+
+GET http://localhost:3000/Tours
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiJhZG1pbiIsIlVzZXJOYW1lIjoiQWRtaW5pc3RyYXRvciIsImlhdCI6MTcxODU1ODE2NSwiZXhwIjoxNzE4NTY1MzY1fQ.cfg24Ks5BJzXCUzSj2sjevyv2DOs2DRVsY5ZxPFIed0
+#########
+
+### Add a new booking with authentication
+POST http://localhost:3000/booking
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzNTNhN2RjYi04OGRlLTQ5NjEtYmU5Ny04ZTU2ZTliNmUzNDEiLCJVc2VyTmFtZSI6ImNpbmR5IiwiRW1haWwiOiJtdW5qYWN5bnRoaWFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI3NDQ3LCJleHAiOjE3MTg2MzQ2NDd9.GfUVPBDqJmNptRgjsIIqyeS48oupfOWBtHPwNikT_Oo
+
+{
+    "HotelBooked": "56c80d4e-99f8-475c-b3b5-06a594600fcd",
+    "TourBooked": "7"
+}
+
+#####
+
+GET http://localhost:3000/booking
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzNTNhN2RjYi04OGRlLTQ5NjEtYmU5Ny04ZTU2ZTliNmUzNDEiLCJVc2VyTmFtZSI6ImNpbmR5IiwiRW1haWwiOiJtdW5qYWN5bnRoaWFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI3NDQ3LCJleHAiOjE3MTg2MzQ2NDd9.GfUVPBDqJmNptRgjsIIqyeS48oupfOWBtHPwNikT_Oo
+
+
+#######
+
+GET http://localhost:3000/booking/64165e72-2ec3-4f29-b287-3eb5fde06069
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzNTNhN2RjYi04OGRlLTQ5NjEtYmU5Ny04ZTU2ZTliNmUzNDEiLCJVc2VyTmFtZSI6ImNpbmR5IiwiRW1haWwiOiJtdW5qYWN5bnRoaWFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI3NDQ3LCJleHAiOjE3MTg2MzQ2NDd9.GfUVPBDqJmNptRgjsIIqyeS48oupfOWBtHPwNikT_Oo
+
+#######
+
+PUT http://localhost:3000/booking/5cc8e475-ced8-4f7a-b17e-794652adc6a0
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzNTNhN2RjYi04OGRlLTQ5NjEtYmU5Ny04ZTU2ZTliNmUzNDEiLCJVc2VyTmFtZSI6ImNpbmR5IiwiRW1haWwiOiJtdW5qYWN5bnRoaWFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI3NDQ3LCJleHAiOjE3MTg2MzQ2NDd9.GfUVPBDqJmNptRgjsIIqyeS48oupfOWBtHPwNikT_Oo
+
+
+
+{
+    "TourBooked": "7"
+}
+#######
+
+
+PUT http://localhost:3000/booking/8c95a96b-1769-47f7-aeae-82a1ad7f95bc
+Content-Type: application/json
+
+{
+    "TourBooked": "Tour1",
+    "HotelBooked":"none"
+}
+#######
+
+
+DELETE  http://localhost:3000/booking/65b22115-e5b5-4b3f-b3c9-ee6513a39acf
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzNTNhN2RjYi04OGRlLTQ5NjEtYmU5Ny04ZTU2ZTliNmUzNDEiLCJVc2VyTmFtZSI6ImNpbmR5IiwiRW1haWwiOiJtdW5qYWN5bnRoaWFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjE1NTQ2LCJleHAiOjE3MTg2MjI3NDZ9.PPiMLaPupYn6hUFUZuPjieJO8kr34t51AbRotbRigDo
+
+#######
+
+
+
+

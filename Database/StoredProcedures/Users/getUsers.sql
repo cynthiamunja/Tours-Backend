@@ -1,0 +1,8 @@
+USE productsDB;
+GO
+CREATE or ALTER PROCEDURE getUsers
+AS
+BEGIN
+    SELECT * FROM Users;
+END;
+GO
