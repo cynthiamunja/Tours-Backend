@@ -166,49 +166,40 @@ export async function deleteBooking(request: bookingRequest, response: Response)
         console.log(id);
 
         const thisEmail = request.info?.Email;
-
-        console.log(thisEmail)
-        if (!thisEmail) {
-            return response.status(400).json({ message: "Invalid token: missing email" });
-        }
+        console.log(thisEmail);
 
         const adminEmail = process.env.ADMINEMAIL as string;
 
-        if (!adminEmail) {
-            return response.status(500).json({ message: "Admin email not configured" });
-        }
-
-        let userEmail: string | null = null;
-        let adminEmailParam: string | null = null;
-
-        if (thisEmail === adminEmail) {
-            adminEmailParam = thisEmail;
+        if (!thisEmail) {
+            response.status(400).json({ message: "Invalid token: missing email" });
+        } else if (!adminEmail) {
+            response.status(500).json({ message: "Admin email not configured" });
         } else {
-            userEmail = thisEmail;
+            const booking = await (await dbInstance.exec("getOneBooking", { BookingID: id, UserEmail: thisEmail, AdminEmail: adminEmail })).recordset[0] as booking;
+            if (!booking) {
+                response.status(404).json({ message: "Booking not found" });
+            } else if (thisEmail !== adminEmail && thisEmail !== booking.UserEmail) {
+                response.status(403).json({ message: "Permission denied: You are not authorized to delete this booking" });
+            } else if (booking.IsDeleted === 1) {
+                response.status(400).json({ message: "Booking already deleted" });
+            } else {
+                await dbInstance.exec("deleteBooking", {
+                    BookingID: id,
+                    UserEmail: booking.UserEmail,
+                    AdminEmail: adminEmail
+                });
+
+                console.log('Deleted Booking:', id);
+
+                response.status(200).json({ message: "Booking deleted successfully" });
+            }
         }
-
-       
-
-        // Handle null values by converting them to empty strings
-        const userEmailParam = userEmail ?? '';
-        const adminEmailParamFinal = adminEmailParam ?? '';
-
-        await dbInstance.exec("deleteBooking", {
-            BookingID: id,
-            UserEmail: userEmailParam,
-            AdminEmail: adminEmailParamFinal
-        });
-        
-        console.log(userEmailParam, adminEmailParam)
-       
-        return response.status(200).json({ message: "Booking deleted successfully" });
-
-         
     } catch (error) {
         console.error('Error deleting booking:', error);
         response.status(500).send({ message: 'Failed to delete booking', error });
     }
 }
+
 
 
 

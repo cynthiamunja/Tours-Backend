@@ -6,14 +6,17 @@ export interface ToursRequest extends ExtendedRequest{
         TourName: string;
         TourPrice: number;
         TourDescription:string;
+        isDeleted:number;
     };
 }
 
 export interface ITour{
     TourID:string;
     TourName:string;
+    isDeleted:number;
 }
 export interface deletedTour{
     TourID:string;
     TourName:string;
+    isDeleted:number;
 }

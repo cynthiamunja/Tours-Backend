@@ -168,6 +168,9 @@ export async function updateHotel(request: HotelRequest, response: Response) {
                 const thisHotel=await ( await dbInstance.exec('getOneHotel',{HotelID:id})). recordset[0] as Hotel
         
             if(thisHotel && thisHotel.HotelID){
+                if (thisHotel.isDeleted === 1) {
+                    return response.status(400).json({ message: "hotel already deleted" });
+                }
                 await dbInstance.exec('deleteHotel',{HotelID:id})
                 return response.status(200).json({message:"hotel Deleted "})
            }else{
@@ -178,7 +181,7 @@ export async function updateHotel(request: HotelRequest, response: Response) {
             }
     
         } catch (error) {
-            console.error('Error delete tour:', error);
+            console.error('Error deleting hotel:', error);
             response.status(500).send({ message: 'failed to delete hotel', error });
         }
     }

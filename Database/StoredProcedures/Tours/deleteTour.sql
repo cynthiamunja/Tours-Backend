@@ -5,6 +5,8 @@ CREATE OR ALTER PROCEDURE deleteTour
     @TourID VARCHAR(255)
 AS
 BEGIN
-    DELETE FROM Tours WHERE TourID = @TourID;
+   UPDATE Tours
+    SET isDeleted = 1
+    WHERE TourID = @TourID;
 END;
 GO

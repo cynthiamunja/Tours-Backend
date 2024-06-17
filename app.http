@@ -5,7 +5,7 @@ token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzNTNhN2RjYi04OGRlLTQ5N
 ### Add a new tour with authentication
 POST http://localhost:3000/Tours
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI1NzEyLCJleHAiOjE3MTg2MzI5MTJ9.B8cGm_sZzfwrYRMgdmSMjZSvsPVLOONVptBhGmRWH34
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjM1MDQzLCJleHAiOjE3MTg2NDIyNDN9.CNG3scqxOef_Ylqvc0ZEVFscZsriebz4Jr_fuIYYMHU
 
 {
     "TourName": "1155 resort5",
@@ -18,8 +18,8 @@ GET http://localhost:3000/Tours/T001
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI1NzEyLCJleHAiOjE3MTg2MzI5MTJ9.B8cGm_sZzfwrYRMgdmSMjZSvsPVLOONVptBhGmRWH34
 
 #########
-DELETE http://localhost:3000/Tours/T002
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjE5NTI2LCJleHAiOjE3MTg2MjY3MjZ9.IVh3Nch4eOgN6IpJ5Vv3r_TICQajOhuYi0HUgzKaQCc
+DELETE http://localhost:3000/Tours/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjM1MDQzLCJleHAiOjE3MTg2NDIyNDN9.CNG3scqxOef_Ylqvc0ZEVFscZsriebz4Jr_fuIYYMHU
 
 #########
 PUT http://localhost:3000/Tours/5
@@ -37,7 +37,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxO
 
 POST http://localhost:3000/Hotels
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI1NzEyLCJleHAiOjE3MTg2MzI5MTJ9.B8cGm_sZzfwrYRMgdmSMjZSvsPVLOONVptBhGmRWH34
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjM3NTc4LCJleHAiOjE3MTg2NDQ3Nzh9.Sa_Aqo05QLnGRqWLpYZK2bHqIMzTy7MjdbtsN32-tYM
 
 
 
@@ -72,8 +72,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxO
 }
 
 #######
-DELETE http://localhost:3000/Hotels/0869ed10-daec-43e6-8389-e246c55d1a2e
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI1NzEyLCJleHAiOjE3MTg2MzI5MTJ9.B8cGm_sZzfwrYRMgdmSMjZSvsPVLOONVptBhGmRWH34
+DELETE http://localhost:3000/Hotels/56c80d4e-99f8-475c-b3b5-06a594600fcd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjM3NTc4LCJleHAiOjE3MTg2NDQ3Nzh9.Sa_Aqo05QLnGRqWLpYZK2bHqIMzTy7MjdbtsN32-tYM
+
 
 
 
@@ -123,11 +124,12 @@ token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiJhZG1pbiIsIlVzZXJOYW1lI
 ### Add a new booking with authentication
 POST http://localhost:3000/booking
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzNTNhN2RjYi04OGRlLTQ5NjEtYmU5Ny04ZTU2ZTliNmUzNDEiLCJVc2VyTmFtZSI6ImNpbmR5IiwiRW1haWwiOiJtdW5qYWN5bnRoaWFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI3NDQ3LCJleHAiOjE3MTg2MzQ2NDd9.GfUVPBDqJmNptRgjsIIqyeS48oupfOWBtHPwNikT_Oo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjQ1MDI5LCJleHAiOjE3MTg2NTIyMjl9.DwCpcMFqpIw7H1SbPde7Pq18KW3NHBMyJFxppqSp2DA
+
 
 {
-    "HotelBooked": "56c80d4e-99f8-475c-b3b5-06a594600fcd",
-    "TourBooked": "7"
+    "TourBooked": "7",
+    "HotelBooked":"56c80d4e-99f8-475c-b3b5-06a594600fcd"
 }
 
 #####
@@ -147,12 +149,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzNTNhN
 
 PUT http://localhost:3000/booking/5cc8e475-ced8-4f7a-b17e-794652adc6a0
 Content-Type: application/json
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzNTNhN2RjYi04OGRlLTQ5NjEtYmU5Ny04ZTU2ZTliNmUzNDEiLCJVc2VyTmFtZSI6ImNpbmR5IiwiRW1haWwiOiJtdW5qYWN5bnRoaWFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI3NDQ3LCJleHAiOjE3MTg2MzQ2NDd9.GfUVPBDqJmNptRgjsIIqyeS48oupfOWBtHPwNikT_Oo
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjQ1MDI5LCJleHAiOjE3MTg2NTIyMjl9.DwCpcMFqpIw7H1SbPde7Pq18KW3NHBMyJFxppqSp2DA
 
 
 
 {
-    "TourBooked": "7"
+    "TourBooked": "7",
+    "HotelBooked":"56c80d4e-99f8-475c-b3b5-06a594600fcd"
 }
 #######
 
@@ -167,9 +170,9 @@ Content-Type: application/json
 #######
 
 
-DELETE  http://localhost:3000/booking/65b22115-e5b5-4b3f-b3c9-ee6513a39acf
+DELETE  http://localhost:3000/booking/24e7796a-8944-4ebb-948f-84e65b8259d0
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzNTNhN2RjYi04OGRlLTQ5NjEtYmU5Ny04ZTU2ZTliNmUzNDEiLCJVc2VyTmFtZSI6ImNpbmR5IiwiRW1haWwiOiJtdW5qYWN5bnRoaWFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjE1NTQ2LCJleHAiOjE3MTg2MjI3NDZ9.PPiMLaPupYn6hUFUZuPjieJO8kr34t51AbRotbRigDo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjQ1MDI5LCJleHAiOjE3MTg2NTIyMjl9.DwCpcMFqpIw7H1SbPde7Pq18KW3NHBMyJFxppqSp2DA
 
 #######
 

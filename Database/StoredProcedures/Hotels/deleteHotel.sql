@@ -2,10 +2,12 @@ USE ToursDB;
 
 GO
 
-CREATE PROCEDURE deleteHotel
+CREATE or alter PROCEDURE deleteHotel
     @HotelID VARCHAR(255)
 AS
 BEGIN
-    DELETE FROM Hotels WHERE HotelID = @HotelID;
+     UPDATE Hotels
+    SET isDeleted = 1
+    WHERE HotelID = @HotelID;
 END;
 GO

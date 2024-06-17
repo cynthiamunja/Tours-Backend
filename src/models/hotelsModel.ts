@@ -5,7 +5,8 @@ export interface Hotel{
     HotelID: string,
     HotelName: string,
     HotelPrice:number,
-    HotelDescription: string
+    HotelDescription: string,
+    isDeleted:number
 }
 
 export interface HotelRequest extends ExtendedRequest{

@@ -10,13 +10,14 @@ BEGIN
     -- Check if the user is an admin (based on @UserEmail being @AdminEmail)
     IF @UserEmail = @AdminEmail
     BEGIN
-        DELETE FROM Bookings
+        UPDATE Bookings
+        SET IsDeleted = 1
         WHERE BookingID = @BookingID;
     END
     ELSE
     BEGIN
-        -- Check if the user is the one who made the booking
-        DELETE FROM Bookings
+        UPDATE Bookings
+        SET IsDeleted = 1
         WHERE BookingID = @BookingID AND UserEmail = @UserEmail;
     END
 END;

@@ -7,6 +7,7 @@ export interface booking {
     TourBooked: string;
     UserEmail: string;
     UserName: string;
+    IsDeleted:number;
 }
 
 export interface bookingRequest extends ExtendedRequest {
@@ -16,6 +17,7 @@ export interface bookingRequest extends ExtendedRequest {
         TourBooked: string;
         UserEmail: string;
         UserName: string;
+        IsDeleted:number;
         AdminEmail: string | null;
     };
     params: {
@@ -29,4 +31,5 @@ export interface deletedbooking {
     TourBooked: string;
     UserEmail: string;
     UserName: string;
+    IsDeleted:number;
 }

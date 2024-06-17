@@ -101,30 +101,32 @@ export async function deleteTour(request: ToursRequest, response: Response) {
 
         const Email = request.info?.Email;
         const UserName = request.info?.UserName;
-
+    
 
         if (!Email) {
             return response.status(400).json({ message: "Invalid token: missing email" });
         }
 
-       
-        if (Email === process.env.ADMINEMAIL && UserName=== "admin" ){
+        // Check if the tour is already deleted
+        const tour = (await dbInstance.exec("getOneTour", { TourID: id })).recordset[0]  as ITour;
+        if (tour.isDeleted === 1) {
+            return response.status(400).json({ message: "Tour already deleted" });
+        }
 
-            await dbInstance.exec("deleteTour",{ TourID:id})
-               console.log(id)
-               // Send a success response
-               response.status(201).json({ message: "Tour deleted successfully" });
-       
-       }else{
-           response.status(201).json({ message: "you are not admin" });
-       }
-        return response.status(404).json({ message: "tour not found" });
-
+        if (Email === process.env.ADMINEMAIL && UserName === "admin") {
+            await dbInstance.exec("deleteTour", { TourID: id });
+            console.log(id);
+            // Send a success response
+            return response.status(201).json({ message: "Tour deleted successfully" });
+        } else {
+            return response.status(403).json({ message: "You are not admin" });
+        }
     } catch (error) {
-        console.error('Error delete tour:', error);
-        response.status(500).send({ message: 'failed to delete tour', error });
+        console.error('Error deleting tour:', error);
+        return response.status(500).send({ message: 'Failed to delete tour', error });
     }
 }
+
 
 export async function updateTour(request: ToursRequest, response: Response) {
     try {
