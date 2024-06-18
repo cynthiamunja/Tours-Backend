@@ -1,12 +1,10 @@
 GET http://localhost:3000/Tours
-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzNTNhN2RjYi04OGRlLTQ5NjEtYmU5Ny04ZTU2ZTliNmUzNDEiLCJVc2VyTmFtZSI6ImNpbmR5IiwiRW1haWwiOiJtdW5qYWN5bnRoaWFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjE5MTE3LCJleHAiOjE3MTg2MjYzMTd9.tAb5rT1tzC9c2gWAYeSoK-Vrt1hkrho6lopDy7q15ak
-
+token:
 #######
 ### Add a new tour with authentication
 POST http://localhost:3000/Tours
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjM1MDQzLCJleHAiOjE3MTg2NDIyNDN9.CNG3scqxOef_Ylqvc0ZEVFscZsriebz4Jr_fuIYYMHU
-
+Authorization: Bearer 
 {
     "TourName": "1155 resort5",
     "TourPrice": 30000,
@@ -15,17 +13,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxO
 
 #########
 GET http://localhost:3000/Tours/T001
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI1NzEyLCJleHAiOjE3MTg2MzI5MTJ9.B8cGm_sZzfwrYRMgdmSMjZSvsPVLOONVptBhGmRWH34
-
+Authorization: 
 #########
 DELETE http://localhost:3000/Tours/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjM1MDQzLCJleHAiOjE3MTg2NDIyNDN9.CNG3scqxOef_Ylqvc0ZEVFscZsriebz4Jr_fuIYYMHU
-
+Authorization: Bearer 
 #########
 PUT http://localhost:3000/Tours/5
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjE5NTI2LCJleHAiOjE3MTg2MjY3MjZ9.IVh3Nch4eOgN6IpJ5Vv3r_TICQajOhuYi0HUgzKaQCc
-
+Authorization: Bearer 
 
 {
     "TourName": "diani5 beach",
@@ -37,8 +32,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxO
 
 POST http://localhost:3000/Hotels
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjM3NTc4LCJleHAiOjE3MTg2NDQ3Nzh9.Sa_Aqo05QLnGRqWLpYZK2bHqIMzTy7MjdbtsN32-tYM
-
+Authorization: Bearer 
 
 
 {
@@ -54,16 +48,14 @@ GET http://localhost:3000/Hotels
 #########
 GET http://localhost:3000/Hotels/36e49b91-2d14-4db1-86ff-3da88a80d7c2
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI1NzEyLCJleHAiOjE3MTg2MzI5MTJ9.B8cGm_sZzfwrYRMgdmSMjZSvsPVLOONVptBhGmRWH34
-
+Authorization: Bearer 
 
 
 #########
 
 PUT http://localhost:3000/Hotels/0869ed10-daec-43e6-8389-e246c55d1a2e
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI1NzEyLCJleHAiOjE3MTg2MzI5MTJ9.B8cGm_sZzfwrYRMgdmSMjZSvsPVLOONVptBhGmRWH34
-
+Authorization: Bearer 
 
 {
     "HotelName": "zanzibar001 beach hotel",
@@ -73,8 +65,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxO
 
 #######
 DELETE http://localhost:3000/Hotels/56c80d4e-99f8-475c-b3b5-06a594600fcd
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjM3NTc4LCJleHAiOjE3MTg2NDQ3Nzh9.Sa_Aqo05QLnGRqWLpYZK2bHqIMzTy7MjdbtsN32-tYM
-
+Authorization: Bearer 
 
 
 
@@ -118,14 +109,14 @@ Content-Type: application/json
 
 
 GET http://localhost:3000/Tours
-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiJhZG1pbiIsIlVzZXJOYW1lIjoiQWRtaW5pc3RyYXRvciIsImlhdCI6MTcxODU1ODE2NSwiZXhwIjoxNzE4NTY1MzY1fQ.cfg24Ks5BJzXCUzSj2sjevyv2DOs2DRVsY5ZxPFIed0
+token:
+
 #########
 
 ### Add a new booking with authentication
 POST http://localhost:3000/booking
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjQ1MDI5LCJleHAiOjE3MTg2NTIyMjl9.DwCpcMFqpIw7H1SbPde7Pq18KW3NHBMyJFxppqSp2DA
-
+Authorization: Bearer 
 
 {
     "TourBooked": "7",
@@ -136,20 +127,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxO
 
 GET http://localhost:3000/booking
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzNTNhN2RjYi04OGRlLTQ5NjEtYmU5Ny04ZTU2ZTliNmUzNDEiLCJVc2VyTmFtZSI6ImNpbmR5IiwiRW1haWwiOiJtdW5qYWN5bnRoaWFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI3NDQ3LCJleHAiOjE3MTg2MzQ2NDd9.GfUVPBDqJmNptRgjsIIqyeS48oupfOWBtHPwNikT_Oo
-
+Authorization: Bearer 
 
 #######
 
 GET http://localhost:3000/booking/64165e72-2ec3-4f29-b287-3eb5fde06069
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzNTNhN2RjYi04OGRlLTQ5NjEtYmU5Ny04ZTU2ZTliNmUzNDEiLCJVc2VyTmFtZSI6ImNpbmR5IiwiRW1haWwiOiJtdW5qYWN5bnRoaWFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjI3NDQ3LCJleHAiOjE3MTg2MzQ2NDd9.GfUVPBDqJmNptRgjsIIqyeS48oupfOWBtHPwNikT_Oo
+Authorization: Bearer 
 
 #######
 
 PUT http://localhost:3000/booking/5cc8e475-ced8-4f7a-b17e-794652adc6a0
 Content-Type: application/json
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjQ1MDI5LCJleHAiOjE3MTg2NTIyMjl9.DwCpcMFqpIw7H1SbPde7Pq18KW3NHBMyJFxppqSp2DA
+Authorization:Bearer 
+
 
 
 
@@ -172,7 +163,7 @@ Content-Type: application/json
 
 DELETE  http://localhost:3000/booking/24e7796a-8944-4ebb-948f-84e65b8259d0
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiIzMjcxODJhYy04N2ZiLTQxZjMtODIwZC1lMzViZjViZTNkZDYiLCJVc2VyTmFtZSI6ImFkbWluIiwiRW1haWwiOiJjeW50aGlhbXVuamFAZ21haWwuY29tIiwiaWF0IjoxNzE4NjQ1MDI5LCJleHAiOjE3MTg2NTIyMjl9.DwCpcMFqpIw7H1SbPde7Pq18KW3NHBMyJFxppqSp2DA
+Authorization: Bearer
 
 #######
 
